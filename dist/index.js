@@ -14,7 +14,7 @@ class Adapter extends Base_1.default {
     read() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let data = yield this.source.promisify('getObject')().text().data;
+                let data = yield this.source.promisify('getObject')().text();
                 return data ? this.deserialize(data) : this.defaultValue;
             }
             catch (e) {
@@ -36,4 +36,5 @@ class Adapter extends Base_1.default {
     }
 }
 exports.default = Adapter;
+module.exports = Adapter;
 //# sourceMappingURL=index.js.map

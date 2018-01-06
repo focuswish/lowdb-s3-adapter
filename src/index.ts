@@ -4,7 +4,7 @@ import { Readable } from 'stream'
 class Adapter extends Base {
   async read() {
     try {
-      let data = await this.source.promisify('getObject')().text().data
+      let data = await this.source.promisify('getObject')().text()
       return data ? this.deserialize(data) : this.defaultValue
       
     } catch(e) {
@@ -28,3 +28,4 @@ class Adapter extends Base {
 }
 
 export default Adapter
+module.exports = Adapter;
