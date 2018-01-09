@@ -19,11 +19,10 @@ class Adapter extends Base {
   }
 
   async write(data) {
-    let stream = new Readable
-    stream.push(this.serialize(data))
-    stream.push(null)
-      
-    return this.source.streamUpload(stream, {}).data
+    this.fs.write(this.serialize(data))
+
+    return data;
+   
   }
 }
 

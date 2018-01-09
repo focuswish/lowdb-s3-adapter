@@ -28,10 +28,8 @@ class Adapter extends Base_1.default {
     }
     write(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            let stream = new stream_1.Readable;
-            stream.push(this.serialize(data));
-            stream.push(null);
-            return this.source.streamUpload(stream, {}).data;
+            this.fs.write(this.serialize(data));
+            return data;
         });
     }
 }

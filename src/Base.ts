@@ -1,10 +1,12 @@
 import Tools from 's3-tools/dist/Tools'
+import graceful from 'graceful-s3';
 
 interface Base {
   source: any,
   defaultValue: any,
   serialize: any,
   deserialize: any
+  fs: any
 }
 
 class Base {
@@ -21,6 +23,7 @@ class Base {
     this.defaultValue = defaultValue
     this.serialize = serialize
     this.deserialize = deserialize
+    this.fs = graceful(params, AwsConfig)
   }
 }
 

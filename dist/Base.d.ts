@@ -3,6 +3,7 @@ interface Base {
     defaultValue: any;
     serialize: any;
     deserialize: any;
+    fs: any;
 }
 declare class Base {
     constructor(params?: {}, AwsConfig?: {}, {defaultValue, serialize, deserialize}?: {
