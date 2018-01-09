@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -d",
-    "test": "cross-env NODE_ENV=test,graceful-s3* nyc mocha",
+    "test": "NODE_ENV=test DEBUG=graceful-s3* node test/loop",
     "publish": "mkrepo --publish"
   },
   "keywords": [],

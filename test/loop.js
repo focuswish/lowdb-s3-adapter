@@ -3,7 +3,8 @@ const low = require('lowdb')
 
 let adapter = new Adapter(
   { bucket: 'stackerror', key: 'example.json' },
-  { region: 'us-east-1' }
+  { region: 'us-east-1' },
+  { mergeState: false }
 )
 
 async function init() {
