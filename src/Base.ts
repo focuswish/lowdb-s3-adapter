@@ -16,14 +16,15 @@ class Base {
     { 
       defaultValue = {}, 
       serialize = obj => JSON.stringify(obj, null, 2),
-      deserialize = JSON.parse 
+      deserialize = JSON.parse,
+      mergeState = false
     } = {}
   ) {
     this.source = new Tools(params, AwsConfig)
     this.defaultValue = defaultValue
     this.serialize = serialize
     this.deserialize = deserialize
-    this.fs = graceful(params, AwsConfig)
+    this.fs = graceful(params, AwsConfig, { mergeState })
   }
 }
 
