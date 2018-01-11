@@ -19,7 +19,7 @@ class Adapter extends Base {
   }
 
   async write(data) {
-    this.fs.write(this.serialize(data))
+    this.graceful.write(this.serialize(data))
 
     return data;
    

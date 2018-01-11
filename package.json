@@ -19,7 +19,8 @@
     "typescript": "^2.6.2"
   },
   "dependencies": {
-    "graceful-s3": "^1.0.5",
-    "s3-tools": "^0.0.13"
+    "graceful-s3": "^1.0.6",
+    "rx-lite": "^4.0.8",
+    "s3-tools": "^0.0.14"
   }
 }

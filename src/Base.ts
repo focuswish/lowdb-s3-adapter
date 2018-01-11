@@ -6,7 +6,7 @@ interface Base {
   defaultValue: any,
   serialize: any,
   deserialize: any
-  fs: any
+  graceful: any
 }
 
 class Base {
@@ -24,7 +24,7 @@ class Base {
     this.defaultValue = defaultValue
     this.serialize = serialize
     this.deserialize = deserialize
-    this.fs = graceful(params, AwsConfig, { mergeState })
+    this.graceful = graceful(params, AwsConfig, { mergeState })
   }
 }
 
