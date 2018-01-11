@@ -3,14 +3,13 @@ interface Base {
     defaultValue: any;
     serialize: any;
     deserialize: any;
-    fs: any;
+    graceful: any;
 }
 declare class Base {
-    constructor(params?: {}, AwsConfig?: {}, {defaultValue, serialize, deserialize, mergeState}?: {
+    constructor(params?: {}, AwsConfig?: {}, {defaultValue, serialize, deserialize}?: {
         defaultValue?: {};
         serialize?: (obj: any) => string;
         deserialize?: (text: string, reviver?: (key: any, value: any) => any) => any;
-        mergeState?: boolean;
     });
 }
 export default Base;

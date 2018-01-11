@@ -4,7 +4,7 @@ import { Readable } from 'stream'
 class Adapter extends Base {
   async read() {
     try {
-      let data = await this.source.promisify('getObject')().text()
+      let data = await this.source.get().text()
       return data ? this.deserialize(data) : this.defaultValue
       
     } catch(e) {
@@ -12,7 +12,7 @@ class Adapter extends Base {
       stream.push(this.serialize(this.defaultValue))
       stream.push(null)
       
-      await this.source.streamUpload(stream).data 
+      await this.source.streamUpload(stream).promise()
 
       return this.defaultValue
     }

@@ -14,21 +14,21 @@ class Adapter extends Base_1.default {
     read() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let data = yield this.source.promisify('getObject')().text();
+                let data = yield this.source.get().text();
                 return data ? this.deserialize(data) : this.defaultValue;
             }
             catch (e) {
                 let stream = new stream_1.Readable;
                 stream.push(this.serialize(this.defaultValue));
                 stream.push(null);
-                yield this.source.streamUpload(stream).data;
+                yield this.source.streamUpload(stream).promise();
                 return this.defaultValue;
             }
         });
     }
     write(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            this.fs.write(this.serialize(data));
+            this.graceful.write(this.serialize(data));
             return data;
         });
     }

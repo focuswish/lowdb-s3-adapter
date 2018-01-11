@@ -49,9 +49,9 @@ graceful-fs@^4.1.3:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-graceful-s3@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/graceful-s3/-/graceful-s3-1.0.6.tgz#e5a44e9e09abe11ab984582420c941d7a1698774"
+graceful-s3@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/graceful-s3/-/graceful-s3-1.0.7.tgz#c496170326700c91234f678886772aaee2636ac9"
   dependencies:
     rx-lite "^4.0.8"
     s3-tools "^0.0.14"
