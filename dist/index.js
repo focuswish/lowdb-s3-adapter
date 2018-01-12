@@ -28,8 +28,7 @@ class Adapter extends Base_1.default {
     }
     write(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            this.graceful.write(this.serialize(data));
-            return data;
+            return this.graceful.write(this.serialize(data));
         });
     }
 }

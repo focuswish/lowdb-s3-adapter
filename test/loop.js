@@ -2,9 +2,8 @@ const Adapter = require('../dist')
 const low = require('lowdb')
 
 let adapter = new Adapter(
-  { bucket: 'stackerror', key: 'example2.json' },
+  { bucket: 'stackerror', key: 'example5.json' },
   { region: 'us-east-1' },
-  { mergeState: false }
 )
 
 async function init() {

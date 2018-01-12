@@ -19,10 +19,7 @@ class Adapter extends Base {
   }
 
   async write(data) {
-    this.graceful.write(this.serialize(data))
-
-    return data;
-   
+    return this.graceful.write(this.serialize(data))   
   }
 }
 
